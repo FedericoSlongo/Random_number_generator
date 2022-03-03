@@ -13,6 +13,7 @@ int main()
     scanf("%d", &numero_max);
     printf("Inserire qual'e' il numero mininmo da generare ");
     scanf("%d", &numero_min);
+    numero_max++;
 
     //Controllo se i numeri sono invertiti
     if(numero_max < numero_min){
