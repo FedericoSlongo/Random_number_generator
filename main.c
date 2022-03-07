@@ -9,26 +9,26 @@ int main()
     char ripetizioni; //Ripetizioni si o no
 
     //Chiede i valori
-    printf("Inserire qual'e' il numero massimo da generare ");
+    printf("Insert the max value you want to generate ");
     scanf("%d", &numero_max);
-    printf("Inserire qual'e' il numero mininmo da generare ");
+    printf("Insert the min value you want to generate ");
     scanf("%d", &numero_min);
     numero_max++;
 
     //Controllo se i numeri sono invertiti
     if(numero_max < numero_min){
-        printf("Hai scritto il numero piu' grande e il piu' piccolo al contrario \n(L'ordine verra sistemato automaticamente) \n");
+        printf("You wrote the max value in the min value (and viceversa) \n(They will be automatically swapped) \n");
         numero_max = numero_max + numero_min;
         numero_min = numero_max - numero_min;
         numero_max = numero_max - numero_min;
     }
 
-    printf("Inserire se [s]i vuole ripetizioni [n]o ");
+    printf("Insert if you want repetion (s) or not (n) ");
     scanf(" %c", &ripetizioni);
 
     //Controllo se e' possibile non avere ripetizioni
     if(((numero_max - numero_min) < 10) && ripetizioni == 'n'){
-        printf("Il numero e' troppo piccolo per non avere ripetizioni");
+        printf("The range is to small to not have repetion");
         return 0;
     }
 
